@@ -26,10 +26,10 @@ jobs:
       - name: Sync content files
         run: |
           # Remove old content (except .gitkeep and .obsidian)
-          find quartz-repo/content -mindepth 1 -not -name '.gitkeep' -not -path '*/\.obsidian*' -delete
+          find quartz-repo/content -mindepth 1 -maxdepth 1 -not -name '.gitkeep' -not -name '.obsidian' -not -name 'README.md' -exec rm -rf {} +
 
-          # Copy new content (excluding .git directory)
-          rsync -av --exclude='.git' --exclude='.github' ./ quartz-repo/content/
+          # Copy new content (excluding .git and .github)
+          rsync -av --exclude='.git' --exclude='.github' --exclude='SETUP-TOKEN.md' ./ quartz-repo/content/
 
       - name: Commit and push changes
         run: |
