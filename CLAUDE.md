@@ -1,10 +1,10 @@
 # Claude Code Instructions - Content Repository
 
 ## Repository Overview
-- **Name**: "Dein Kopf. Dein Projekt. Deine KI."
-- **Purpose**: Content repository for ale.ms digital garden
-- **Description**: "Jede Idee ist ein Projekt. Jedes Projekt braucht eine KI."
-- **Type**: Markdown content files / Zettelkasten / Knowledge base
+- **Name**: "alems-zk"
+- **Purpose**: Zettelkasten für ale.ms
+- **Description**: Markdown-basierte Wissenssammlung - vernetzte Notizen und Wissen
+- **Type**: Zettelkasten / Markdown content files / Knowledge base
 - **Live Site**: https://ale.ms
 
 ## Architecture
@@ -12,10 +12,10 @@
 This repository contains **ONLY content** (Markdown files). The presentation layer (Quartz) is in a separate repository.
 
 ### Two-Repository Setup:
-1. **Content Repository** (this repo): Markdown files, notes, knowledge
-   - https://github.com/alemsabic/Dein-Kopf.-Dein-Projekt.-Deine-KI.
-2. **Quartz Repository**: Static site generator, design, layout
-   - https://github.com/alemsabic/notizen
+1. **alems-zk** (this repo): Zettelkasten - Markdown files, notes, knowledge
+   - https://github.com/alemsabic/alems-zk
+2. **alems-site**: Static site generator, design, layout (Quartz)
+   - https://github.com/alemsabic/alems-site
 
 ### Auto-Sync Workflow:
 ```
@@ -140,7 +140,7 @@ This repo can be opened as Obsidian vault:
 ### Session 1 (Oct 8, 2025) - Repository Setup ✅
 
 **Created**:
-- New GitHub repository: "Dein Kopf. Dein Projekt. Deine KI."
+- New GitHub repository: "alems-zk" (Zettelkasten)
 - Initial content import from Quartz repo
 - GitHub Action for auto-sync to Quartz
 - Documentation files (CLAUDE.md, SETUP-TOKEN.md)
@@ -154,7 +154,7 @@ This repo can be opened as Obsidian vault:
 **Configuration**:
 - GitHub PAT secret: `QUARTZ_REPO_TOKEN` (repo scope)
 - Auto-sync on every push to main
-- Target: `alemsabic/notizen` repo, `v4` branch, `/content` folder
+- Target: `alemsabic/alems-site` repo, `v4` branch, `/content` folder
 
 **Architecture Decision**:
 - Separated content from presentation (Quartz)
@@ -168,9 +168,9 @@ This repo can be opened as Obsidian vault:
 
 When using Claude Code on this repository:
 
-**Context**: This is CONTENT-ONLY work
-- Focus on: Markdown files, content structure, organization
-- NOT on: Design, styling, layout (that's in Quartz repo)
+**Context**: This is CONTENT-ONLY work (Zettelkasten)
+- Focus on: Markdown files, content structure, organization, Zettelkasten principles
+- NOT on: Design, styling, layout (that's in alems-site repo)
 
 **Tasks Claude can help with**:
 - Writing and editing markdown content
@@ -180,7 +180,7 @@ When using Claude Code on this repository:
 - Managing tags and links
 - Content QA and consistency checks
 
-**Tasks for Quartz repo** (not here):
+**Tasks for alems-site repo** (not here):
 - Design changes
 - Component development
 - CSS/styling
@@ -235,10 +235,11 @@ git push
 ## Resources
 
 - **Live Site**: https://ale.ms
-- **Quartz Repo**: https://github.com/alemsabic/notizen
+- **Quartz Repo**: https://github.com/alemsabic/alems-site
 - **Quartz Docs**: https://quartz.jzhao.xyz/
 - **Markdown Guide**: https://www.markdownguide.org/
 - **YAML Frontmatter**: https://quartz.jzhao.xyz/authoring-content
+- **Zettelkasten Method**: https://zettelkasten.de/
 
 ---
 
