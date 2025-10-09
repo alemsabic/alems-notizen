@@ -1,125 +1,115 @@
-# alems-zk
+# ale.ms – Zettelkasten
 
-> **Zettelkasten für [ale.ms](https://ale.ms)** - Markdown-basierte Wissenssammlung
+> **Füge Deiner Intelligenz eine Intelligenz hinzu.**
 
 🌐 **Live Site**: [ale.ms](https://ale.ms)
 
-## 🎯 Über dieses Repository
+## Was ist das?
 
-Dieses Repository ist ein **Zettelkasten** - eine Sammlung von vernetzten Notizen und Wissen in Markdown-Format. Jeder Push synchronisiert automatisch mit der Quartz-Präsentationsschicht und deployt zu Cloudflare Pages.
+Ein öffentlicher **Zettelkasten** zum Lernen und Lehren von Künstlicher Intelligenz – erstellt *mit* KI, strukturiert nach der Zettelkasten-Methode.
 
-### Zwei-Repository-Architektur:
+### Zettelkasten-Methode
 
-1. **alems-zk** (dieses Repo): Zettelkasten-Inhalte (Markdown)
-   - https://github.com/alemsabic/alems-zk
-2. **alems-site**: Präsentationsschicht (Quartz Static Site Generator)
-   - https://github.com/alemsabic/alems-site
+Ein System vernetzter, atomarer Notizen. Entwickelt von Denkern wie Niklas Luhmann, ermöglicht es systematische Wissensentwicklung durch Verknüpfung von Ideen.
 
-**Automatische Synchronisation**: Änderungen hier werden automatisch zur Site deployed.
+### KI lernen mit KI
 
-## 📝 Inhalte Bearbeiten
+Dieser Zettelkasten ist ein Experiment: Lernen über Künstliche Intelligenz zusammen mit Claude (KI) als Denkpartner.
 
-### Quick Start
+## Inhalt
+
+### [[_meta/|Meta-Bereich]]: Zettelkasten-Theorie
+
+Verstehe die Methode:
+- **[Prinzipien](https://ale.ms/_meta/prinzipien)** – Atomarität, Verknüpfung, Emergenz
+- **[Workflow](https://ale.ms/_meta/workflow)** – Praktische Anleitung
+- **[Mit KI arbeiten](https://ale.ms/_meta/mit-ki-arbeiten)** – KI als Denkpartner
+- **[Pioniere](https://ale.ms/_meta/pioniere/luhmann)** – Luhmann, Blumenberg, Schmidt
+
+### KI-Grundlagen (in Entwicklung)
+
+Hier entstehen Notizen zu Künstlicher Intelligenz – der Zettelkasten wächst organisch.
+
+## Technologie
+
+**Struktur:**
+- Geschrieben in [Obsidian](https://obsidian.md/)
+- Veröffentlicht mit [Quartz v4.5.1](https://quartz.jzhao.xyz/)
+- Markdown mit `[[Wikilinks]]`
+
+**Architektur:**
+1. **alems-zk** (dieses Repo): Zettelkasten-Inhalte
+2. **[alems-site](https://github.com/alemsabic/alems-site)**: Präsentationsschicht (Quartz)
+
+**Deployment:**
+- Push → GitHub Action → Sync → Cloudflare Pages → Live (1-2 Min)
+
+## Für Entwickler
+
+### Repository klonen
 
 ```bash
-# Repository klonen
 git clone https://github.com/alemsabic/alems-zk.git
 cd alems-zk
-
-# Markdown-Dateien bearbeiten
-# (Beliebiger Editor: VS Code, Obsidian, etc.)
-
-# Commit und Push
-git add .
-git commit -m "content: deine Beschreibung"
-git push
-
-# Warte 1-2 Minuten → Live auf https://ale.ms
 ```
 
-### Content-Struktur
+### Mit Obsidian nutzen
 
-```
-alems-zk/
-├── index.md              # Homepage
-├── about.md             # About-Seite
-└── Projekte/            # Projekte und Themen
-    ├── project-one.md
-    └── project-two.md
-```
+1. Obsidian öffnen → "Open folder as vault"
+2. Diesen Ordner auswählen
+3. Bearbeiten mit Obsidian-Features
+4. Git commit & push
 
-### Markdown-Richtlinien
-
-Alle Content-Dateien sollten YAML Frontmatter enthalten:
-
-```yaml
----
-title: "Dein Seitentitel"
-tags:
-  - ai
-  - learning
----
-
-Dein Inhalt hier...
-```
-
-## 🔄 Auto-Deployment-Pipeline
-
-```
-1. Bearbeiten & Push zu diesem Repo
-   ↓
-2. GitHub Action triggert
-   ↓
-3. Sync zum Quartz-Repository
-   ↓
-4. Cloudflare Pages Build & Deploy
-   ↓
-5. Live auf https://ale.ms (1-2 Min)
-```
-
-## 🤖 Nutzung mit Obsidian
-
-Dieses Repository funktioniert perfekt als Obsidian-Vault:
-
-1. Obsidian öffnen
-2. "Open folder as vault"
-3. Diesen Repository-Ordner auswählen
-4. Mit vollen Obsidian-Features bearbeiten
-5. Commit & Push wie gewohnt
-
-**Empfohlene Plugins**:
+**Empfohlene Plugins:**
 - Git (für Auto-Commit)
 - Templater (für Content-Templates)
 - Tag Wrangler (für Tag-Management)
 
-## 🛠️ Technische Details
+### Markdown-Format
 
-- **Static Site Generator**: [Quartz v4.5.1](https://quartz.jzhao.xyz/)
-- **Quartz Repository**: [alemsabic/alems-site](https://github.com/alemsabic/alems-site)
-- **Hosting**: Cloudflare Pages
-- **Auto-Sync**: GitHub Actions
+Alle Notizen mit YAML Frontmatter:
+
+```yaml
+---
+title: "Titel der Notiz"
+tags:
+  - ki
+  - zettelkasten
+---
+
+Inhalt hier...
+```
+
+### Verknüpfungen
+
+Nutze Wikilinks: `[[andere-notiz]]`
+
+Quartz erstellt automatisch bidirektionale Links und Backlinks.
+
+## Zettelkasten-Prinzipien
+
+- **Atomare Notizen**: Eine Idee pro Zettel
+- **Verknüpfungen**: Zettel leben durch ihre Beziehungen
+- **Eigene Sprache**: In eigenen Worten formulieren
+- **Kontinuität**: Organisches Wachstum über Zeit
+
+## Ressourcen
+
 - **Live Site**: [ale.ms](https://ale.ms)
+- **Quartz Repo**: [alemsabic/alems-site](https://github.com/alemsabic/alems-site)
+- **Quartz Docs**: [quartz.jzhao.xyz](https://quartz.jzhao.xyz/)
+- **Zettelkasten-Methode**: [zettelkasten.de](https://zettelkasten.de/)
 
-## 📚 Dokumentation
+## Kontakt
 
-- **[CLAUDE.md](./CLAUDE.md)** - Detaillierter Kontext für KI-Assistenten
-- **[SETUP-TOKEN.md](./SETUP-TOKEN.md)** - GitHub Token Setup Guide
-- **[Quartz Docs](https://quartz.jzhao.xyz/)** - Offizielle Quartz-Dokumentation
-- **[Live Site](https://ale.ms)** - Die veröffentlichte Website
+- Website: [alemsabic.com](https://alemsabic.com)
+- X/Twitter: [@alemsabic](https://x.com/alemsabic)
+- GitHub: [@alemsabic](https://github.com/alemsabic)
 
-## 🗂️ Zettelkasten-Prinzipien
+## Lizenz
 
-Dieser Zettelkasten folgt grundlegenden Prinzipien:
-
-- **Atomare Notizen**: Jede Notiz behandelt eine einzelne Idee
-- **Verknüpfungen**: Notizen sind über Wikilinks verbunden `[[andere-notiz]]`
-- **Tags**: Kategorisierung über Frontmatter-Tags
-- **Kontinuierliche Entwicklung**: Notizen werden laufend erweitert und verfeinert
-
-## 📄 Lizenz
-
-Inhalte in diesem Repository sind persönliche Notizen und Kursunterlagen.
+Inhalte sind persönliche Notizen und frei nutzbar als Inspiration für eigene Zettelkasten.
 
 ---
 
-**Fragen?** Siehe [CLAUDE.md](./CLAUDE.md) für vollständige Dokumentation.
+**Start:** [ale.ms](https://ale.ms) → [Zettelkasten-Theorie entdecken](https://ale.ms/_meta/)
