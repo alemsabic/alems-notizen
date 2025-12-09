@@ -18,7 +18,7 @@ jobs:
       - name: Checkout Quartz repository
         uses: actions/checkout@v4
         with:
-          repository: alemsabic/pathologie-site
+          repository: alemsabic/alems-site
           token: ${{ secrets.QUARTZ_REPO_TOKEN }}
           path: quartz-repo
           ref: v4
@@ -42,7 +42,7 @@ jobs:
             git add content/
             git commit -m "content: sync from content repo
 
-            Auto-synced from pathologie content repository
+            Auto-synced from ale.ms content repository
 
             🤖 Generated with [Claude Code](https://claude.com/claude-code)
 
