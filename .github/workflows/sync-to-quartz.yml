@@ -29,7 +29,8 @@ jobs:
           find quartz-repo/content -mindepth 1 -maxdepth 1 -not -name '.gitkeep' -not -name '.obsidian' -not -name 'README.md' -exec rm -rf {} +
 
           # Copy only markdown files and folders (exclude repo metadata)
-          rsync -av --exclude='.git*' --exclude='.github' --exclude='SETUP-TOKEN.md' --exclude='CLAUDE.md' --exclude='README.md' --exclude='quartz-repo' ./ quartz-repo/content/
+          # --copy-links: Follow symlinks and copy actual files (needed for bibliography.bib)
+          rsync -av --copy-links --exclude='.git*' --exclude='.github' --exclude='SETUP-TOKEN.md' --exclude='CLAUDE.md' --exclude='README.md' --exclude='quartz-repo' ./ quartz-repo/content/
 
       - name: Commit and push changes
         run: |
