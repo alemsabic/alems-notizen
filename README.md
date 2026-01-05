@@ -9,7 +9,7 @@ Hier entstehen die Zettel, Notizen und Abbildungen.
 | :--- | :--- | :--- |
 | **Content** (Hier) | [alems-notizen](https://github.com/alemsabic/alems-notizen) | Rohe Markdown-Dateien, Obsidian Vault. |
 | **Presentation** | [alems-site](https://github.com/alemsabic/alems-site) | Quartz v4 Engine, Layout, Design. |
-| **Factory** | [zettel-fabrik](https://github.com/alemsabic/zettel-fabrik) | *Privat*. Prompts, Recherchen, Experimente. |
+| **Factory** | [zettel-fabrik](https://github.com/alemsabic/zettel-fabrik) | *Privat*. Recherchen, Experimente. |
 
 ## Workflow
 
