@@ -1,3 +1,8 @@
+---
+draft: true
+---
+
+
 # alems-notizen (Content)
 
 Dies ist das **Content-Repository** für [ale.ms](https://ale.ms).
