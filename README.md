@@ -21,3 +21,5 @@ Hier entstehen die Zettel, Notizen und Abbildungen.
 1.  **Schreiben:** Bearbeite Inhalte hier (Obsidian).
 2.  **Pushen:** `git push` triggert den Prozess.
 3.  **Live:** GitHub Actions synchronisiert den Inhalt zu `alems-site`, Cloudflare Pages baut die Seite.
+
+

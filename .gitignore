@@ -1,6 +1,38 @@
+# macOS
 .DS_Store
+
+# Privates nested Repository
+zettel-fabrik/
+
+# Tool-spezifische Ordner
 .obsidian/
 .claude/
 .gemini/
-zettel-fabrik/
 
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+ENV/
+env/
+
+# Logs
+*.log
+
+# Environment Variables
+.env
+.env.*
+!.env.example
+
+# Editor
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
